@@ -1,0 +1,67 @@
+:root {
+    --unique1: #fe2c55;
+    --unique2: #25f4ee;
+}
+.unique-loader {
+    position: relative;
+}
+.unique-loader::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    background-color: var(--unique1);
+    position: absolute;
+    aspect-ratio: 1;
+    top: 0;
+    left: 0;
+    animation: unique1 1s linear infinite;
+}
+.unique-loader::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    background: var(--unique2);
+    position: absolute;
+    aspect-ratio: 1;
+    top: 0;
+    left: 0;
+    animation: unique2 1s linear infinite;
+}
+@keyframes unique1 {
+    0% {
+        transform: translateX(0);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    25% {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    50% {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transform: translateX(100%); 
+    }
+}
+@keyframes unique2 {
+    0% {
+        transform: translateX(0);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    25% {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    50% {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transform: translateX(-100%); 
+    }
+}

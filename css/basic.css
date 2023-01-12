@@ -1,0 +1,48 @@
+:root {
+    --skyblue: #228bcc;
+    --white: #ffffff;
+    --orange: #e67e22;
+    --pink: #9b59b6;
+    --sun-flower: #f1c40f;
+}
+.loader {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%; 
+    background: transparent;
+    position: relative;
+ }
+ .loader::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 70px;
+     width: 70px;
+     border-top: 5px solid var(--skyblue);
+     border-radius: 50%;    
+     animation: rotate 1s linear infinite;
+     transition: color .2s linear;
+ }
+ @keyframes rotate {
+     0% {
+         transform: rotate(0deg);
+     }
+     25% {
+         transform: rotate(100deg);
+         border-color: var(--pink)
+     }
+     50% {
+         transform: rotate(200deg);
+         border-color: var(--orange);
+     }
+     75% {
+         transform: rotate(300deg);
+         border-color: var(--skyblue)
+     }
+     100% {
+         transform: rotate(360deg);
+         border-color:var(--sun-flower)
+     }
+ }
+ 

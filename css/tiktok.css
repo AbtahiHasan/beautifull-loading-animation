@@ -1,0 +1,40 @@
+:root {
+    --unique1: #fe2c55;
+    --unique2: #25f4ee;
+}
+.tik-tok-loader1 {
+    background-color: var(--unique1);
+    animation: tiktok1 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.tik-tok-loader2 {
+    background: var(--unique2);
+    animation: tiktok2 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    mix-blend-mode: darken;
+}
+
+@keyframes tiktok1 {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        
+        transform: translateX(100%); 
+    }
+}
+@keyframes tiktok2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%); 
+    }
+}
